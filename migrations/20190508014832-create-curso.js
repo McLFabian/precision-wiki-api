@@ -24,7 +24,7 @@ module.exports = {
       },
       disponible: {
         type: Sequelize.BOOLEAN
-      },
+      }
     });
   },
   down: (queryInterface, Sequelize) => {

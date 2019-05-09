@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     disponible: DataTypes.BOOLEAN
   }, {});
   Inscripcion_Curso.associate = function(models) {
-    // associations can be defined here
+    Inscripcion_Curso.belongsTo(models.Curso);
+    Inscripcion_Curso.belongsTo(models.Usuario);// associations can be defined here
   };
   return Inscripcion_Curso;
 };

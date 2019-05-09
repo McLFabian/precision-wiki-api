@@ -12,7 +12,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      id_trabajador: {
+      id_usuario: {
         allowNull: false,
         type: Sequelize.INTEGER
       },
@@ -29,7 +29,7 @@ module.exports = {
       },
       disponible: {
         type: Sequelize.BOOLEAN
-      },
+      }
     });
   },
   down: (queryInterface, Sequelize) => {

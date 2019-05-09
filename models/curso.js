@@ -4,7 +4,14 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING
   }, {});
   Curso.associate = function(models) {
-    Curso.// associations can be defined here
+    Curso.hasMany(models.Inscripcion_Curso, {
+      foreignKey: 'id_curso',
+      as: 'inscripcion_cursos',
+    });
+    Curso.hasMany(models.Aporte_Curso, {
+      foreignKey: 'id_curso',
+      as: 'aporte_cursos',
+    });
   };
   return Curso;
 };

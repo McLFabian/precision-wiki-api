@@ -4,13 +4,13 @@ module.exports = (sequelize, DataTypes) => {
     id: DataTypes.INTEGER
   }, {});
   Usuario.associate = function(models) {
-    Usuario.hasOne(models.Administrador, {
+    Usuario.hasMany(models.Inscripcion_Curso, {
       foreignKey: 'id_Usuario',
-      as: 'administradores',
+      as: 'inscripcion_cursos',
     });
-    Usuario.hasOne(models.Trabajador, {
+    Usuario.hasMany(models.Aporte, {
       foreignKey: 'id_Usuario',
-      as: 'trabajadores',
+      as: 'aportes',
     });
   };
   return Usuario;

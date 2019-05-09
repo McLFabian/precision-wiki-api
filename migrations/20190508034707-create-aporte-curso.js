@@ -23,6 +23,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      disponible: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN
       }
     });
   },

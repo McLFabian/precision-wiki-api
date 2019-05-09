@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "postgres",
-    "password": null,
+    "password": "postgres",
     "database": "precisionwikidb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "tester",
-    "password": tester,
-    "database": "precision-wiki-db",
+    "password": "tester",
+    "database": "precisionwikidb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
