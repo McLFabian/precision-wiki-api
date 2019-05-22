@@ -51,6 +51,14 @@ router.post('/api/inscripcion_curso', inscripcion_cursoController.add);
 router.put('/api/inscripcion_curso/:id', inscripcion_cursoController.update);
 router.delete('/api/inscripcion_curso/:id', inscripcion_cursoController.delete);
 
+const chequeo_aporte_cursoController = require('../controllers').chequeo_aporte_curso;
+
+router.get('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.list);
+router.get('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.getById);
+router.post('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.add);
+router.put('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.update);
+router.delete('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.delete);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

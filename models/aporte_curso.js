@@ -5,7 +5,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Aporte_Curso.associate = function(models) {
     Aporte_Curso.belongsTo(models.Aporte);// associations can be defined here
-    Aporte_Curso.belongsTo(models.Curso);// associations can be defined here
+    Aporte_Curso.belongsTo(models.Curso);
+    Aporte_Curso.hasMany(models.Chequeo_Aporte_Curso, {
+      foreignKey: 'id_aporte_curso',
+      as: 'chequeo_aporte_curso',
+    })
   };
   return Aporte_Curso;
 };

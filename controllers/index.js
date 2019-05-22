@@ -12,4 +12,5 @@ module.exports = {
   aporte_curso,
   curso,
   inscripcion_curso,
+  chequeo_aporte_curso,
 };

@@ -5,11 +5,15 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Usuario.associate = function(models) {
     Usuario.hasMany(models.Inscripcion_Curso, {
-      foreignKey: 'id_Usuario',
+      foreignKey: 'id_usuario',
       as: 'inscripcion_cursos',
     });
+    Usuario.hasMany(models.Chequeo_Aporte_Curso, {
+      foreignKey: 'id_usuario',
+      as: 'chequeo_aporte_cursos',
+    });
     Usuario.hasMany(models.Aporte, {
-      foreignKey: 'id_Usuario',
+      foreignKey: 'id_usuario',
       as: 'aportes',
     });
   };
