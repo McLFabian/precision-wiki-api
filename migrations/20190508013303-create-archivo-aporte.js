@@ -10,16 +10,29 @@ module.exports = {
       },
       id_aporte: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Aportes',
+          key: 'id'
+        }
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       ruta: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      archivo: {
+        type: Sequelize.TEXT
+      },
+      video: {
+        type: Sequelize.TEXT
+      },
+      disponible: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -28,9 +41,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      disponible: {
-        type: Sequelize.BOOLEAN
       }
     });
   },

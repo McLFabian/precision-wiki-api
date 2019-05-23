@@ -33,6 +33,8 @@ module.exports = {
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
         ruta: req.body.ruta,
+        archivo: req.body.archivo,
+        video: req.body.video,
         disponible: req.body.disponible,
       })
       .then((archivo_aporte) => res.status(201).send(archivo_aporte))
@@ -54,6 +56,8 @@ module.exports = {
             nombre: req.body.nombre || aporte.nombre,
             descripcion: req.body.descripcion || aporte.descripcion,
             ruta: req.body.ruta || aporte.ruta,
+            archivo: req.body.archivo || aporte.archivo,
+            video: req.body.video || aporte.video,
             disponible: req.body.disponible || aporte.disponible,
           })
           .then(() => res.status(200).send(archivo_aporte))

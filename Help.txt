@@ -6,6 +6,10 @@ Modelos:
 
 Comandos:
 sudo -u postgres psql # Entrar en la consola de comandos de Postgresql con el usuario postgres
+service postgresql restart # Reiniciar servicio de postgres
+
+
+ALTER USER postgres WITH PASSWORD '&NuevaClave'; #Cambiar la contraseña del usuario postgres en psql
 \l # Listar las bases de datos que existan
 CREATE DATABASE &nombre; # Crea una base de datos con el nombre &nombre
 DROP DATABASE &target_database; # Eliminar una de las Bases de datos listadas
@@ -16,3 +20,6 @@ DROP DATABASE &target_database; # Eliminar una de las Bases de datos listadas
 sequelize model:create --name Chequeo_Aporte_Curso --attributes id_usuario:integer,id_aporte_curso:integer,visto:boolean # Crear modelo para BDD en Sequelize
 
 
+git add *
+git commit -m "&TextoAEscribir"
+git push origin master

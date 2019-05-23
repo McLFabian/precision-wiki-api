@@ -9,10 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      ruta: {
+        type: Sequelize.TEXT
+      },
+      disponible: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -22,9 +28,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      disponible: {
-        type: Sequelize.BOOLEAN
-      }
+
     });
   },
   down: (queryInterface, Sequelize) => {

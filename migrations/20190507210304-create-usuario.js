@@ -8,21 +8,33 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      username: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
       nombre: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       apellido: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       run: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      username: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
+      administrador: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN
+      },
+      activo: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -32,10 +44,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      activo: {
-        allowNull: false,
-        type: Sequelize.BOOLEAN
-      }
     });
   },
   down: (queryInterface, Sequelize) => {

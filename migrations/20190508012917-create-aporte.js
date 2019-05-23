@@ -10,16 +10,23 @@ module.exports = {
       },
       id_usuario: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Usuarios',
+          key: 'id'
+        }
       },
       titulo: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       contenido: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      disponible: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -28,9 +35,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      disponible: {
-        type: Sequelize.BOOLEAN
       }
     });
   },

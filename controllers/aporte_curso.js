@@ -31,8 +31,6 @@ module.exports = {
       .create({
         id_curso: req.body.id_curso,
         id_aporte: req.body.id_aporte,
-        descripcion: req.body.descripcion,
-        ruta: req.body.ruta,
         disponible: req.body.disponible,
       })
       .then((aporte_curso) => res.status(201).send(aporte_curso))
@@ -52,8 +50,6 @@ module.exports = {
           .update({
             id_curso: req.body.id_curso || aporte.id_curso,
             id_aporte: req.body.id_aporte || aporte.id_aporte,
-            descripcion: req.body.descripcion || aporte.descripcion,
-            ruta: req.body.ruta || aporte.ruta,
             disponible: req.body.disponible || aporte.disponible,
           })
           .then(() => res.status(200).send(aporte_curso))

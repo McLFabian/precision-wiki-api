@@ -31,8 +31,9 @@ module.exports = {
       .create({
         id_curso: req.body.id_curso,
         id_usuario: req.body.id_usuario,
-        endedat: req.body.endedat,
         disponible: req.body.disponible,
+        endedAt: req.body.endedAt,
+
       })
       .then((inscripcion_curso) => res.status(201).send(inscripcion_curso))
       .catch((error) => res.status(400).send(error));
@@ -51,8 +52,9 @@ module.exports = {
           .update({
             id_curso: req.body.id_curso || aporte.id_curso,
             id_usuario: req.body.id_usuario || aporte.id_usuario,
-            endedat: req.body.endedat || aporte.endedat,
             disponible: req.body.disponible || aporte.disponible,
+            endedAt: req.body.endedAt || aporte.endedAt,
+
           })
           .then(() => res.status(200).send(inscripcion_curso))
           .catch((error) => res.status(400).send(error));

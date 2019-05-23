@@ -49,6 +49,7 @@ module.exports = {
       .create({
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
+        ruta: req.body.ruta,
         disponible: req.body.disponible,
       })
       .then((curso) => res.status(201).send(curso))
@@ -76,6 +77,7 @@ module.exports = {
           .update({
             nombre: req.body.nombre || curso.nombre,
             descripcion: req.body.descripcion || curso.descripcion,
+            ruta: req.body.ruta || curso.ruta,
             disponible: req.body.disponible || curso.disponible,
           })
           .then(() => res.status(200).send(curso))

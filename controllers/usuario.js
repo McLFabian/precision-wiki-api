@@ -29,6 +29,9 @@ module.exports = {
           model: Aporte,
           as: 'aportes'
         },{
+          model: Chequeo_Aporte_Curso,
+          as: 'chequeo_aporte_curso'
+        },{
           model: Inscripcion_Curso,
           as: 'inscripcion_cursos'
         }],
@@ -65,6 +68,9 @@ module.exports = {
           model: Aporte,
           as: 'aportes'
         },{
+          model: Chequeo_Aporte_Curso,
+          as: 'chequeo_aporte_curso'
+        }{
           model: Inscripcion_Curso,
           as: 'inscripcion_cursos'
         }],

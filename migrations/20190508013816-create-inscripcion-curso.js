@@ -10,11 +10,25 @@ module.exports = {
       },
       id_curso: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Cursos',
+          key: 'id'
+        }
       },
       id_usuario: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Usuarios',
+          key: 'id'
+        }
+      },
+      disponible: {
+        type: Sequelize.BOOLEAN
+      },
+      endedAt: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -23,12 +37,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      endedAt: {
-        type: Sequelize.DATE
-      },
-      disponible: {
-        type: Sequelize.BOOLEAN
       }
     });
   },

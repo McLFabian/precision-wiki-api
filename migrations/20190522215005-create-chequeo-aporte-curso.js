@@ -9,10 +9,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_usuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Usuarios',
+          key: 'id'
+        }
       },
       id_aporte_curso: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Aporte_Cursos',
+          key: 'id'
+        }
       },
       visto: {
         type: Sequelize.BOOLEAN
