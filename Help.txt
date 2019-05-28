@@ -40,6 +40,6 @@ git status
 git add *
 git commit -m "&TextoAEscribir"
 git push origin master
-
+git pull origin master
 
 npm install
