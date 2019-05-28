@@ -28,6 +28,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      email: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
       administrador: {
         allowNull: false,
         type: Sequelize.BOOLEAN

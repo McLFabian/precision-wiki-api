@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Curso = sequelize.define('Curso', {
-    nombre: DataTypes.STRING
+    nombre: DataTypes.STRING,
+    descripcion: DataTypes.TEXT,
+    ruta: DataTypes.TEXT,
+    disponible: DataTypes.BOOLEAN
   }, {});
   Curso.associate = function(models) {
     Curso.hasMany(models.Inscripcion_Curso, {

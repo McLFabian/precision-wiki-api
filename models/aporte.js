@@ -1,7 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Aporte = sequelize.define('Aporte', {
-    titulo: DataTypes.STRING
+    id_usuario: DataTypes.INTEGER,
+    titulo: DataTypes.STRING,
+    descripcion: DataTypes.TEXT,
+    contenido: DataTypes.TEXT,
+    disponible: DataTypes.BOOLEAN
   }, {});
   Aporte.associate = function(models) {
     Aporte.belongsTo(models.Usuario);

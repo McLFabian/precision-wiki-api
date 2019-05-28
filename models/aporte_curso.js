@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Aporte_Curso = sequelize.define('Aporte_Curso', {
-    id_curso: DataTypes.INTEGER
+    id_curso: DataTypes.INTEGER,
+    id_aporte: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
+    disponible: DataTypes.BOOLEAN
   }, {});
   Aporte_Curso.associate = function(models) {
     Aporte_Curso.belongsTo(models.Aporte);// associations can be defined here

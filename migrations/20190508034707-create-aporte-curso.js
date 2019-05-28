@@ -24,6 +24,10 @@ module.exports = {
           key: 'id'
         }
       },
+      disponible: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -31,10 +35,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      disponible: {
-        allowNull: false,
-        type: Sequelize.BOOLEAN
       }
     });
   },
