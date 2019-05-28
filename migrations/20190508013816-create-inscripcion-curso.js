@@ -24,7 +24,7 @@ module.exports = {
           key: 'id'
         }
       },
-      disponible: {
+      activo: {
         type: Sequelize.BOOLEAN
       },
       endedAt: {

@@ -50,10 +50,12 @@ module.exports = {
   add(req, res) {
     return Usuario
       .create({
-        username: req.body.username,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         run: req.body.run,
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
         administrador: req.body.administrador,
         activo: req.body.activo,
       })
@@ -83,10 +85,12 @@ module.exports = {
         }
         return usuario
           .update({
-            username: req.body.username || usuario.username,
             nombre: req.body.nombre || usuario.nombre,
             apellido: req.body.apellido || usuario.apellido,
             run: req.body.run || usuario.run,
+            username: req.body.username || usuario.username,
+            password: req.body.password || usuario.password,
+            email: req.body.email || usuario.email,
             administrador: req.body.administrador || usuario.administrador,
             activo: req.body.activo || usuario.activo,
           })

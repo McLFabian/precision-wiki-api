@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Inscripcion_Curso = sequelize.define('Inscripcion_Curso', {
     id_curso: DataTypes.INTEGER,
     id_usuario: DataTypes.INTEGER,
-    disponible: DataTypes.BOOLEAN
+    activo: DataTypes.BOOLEAN,
+    endedAt: DataTypes.DATE
   }, {});
   Inscripcion_Curso.associate = function(models) {
     Inscripcion_Curso.belongsTo(models.Curso);

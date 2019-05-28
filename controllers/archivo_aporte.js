@@ -52,13 +52,13 @@ module.exports = {
         }
         return archivo_aporte
           .update({
-            id_aporte: req.body.id_aporte || aporte.id_aporte,
-            nombre: req.body.nombre || aporte.nombre,
-            descripcion: req.body.descripcion || aporte.descripcion,
-            ruta: req.body.ruta || aporte.ruta,
-            archivo: req.body.archivo || aporte.archivo,
-            video: req.body.video || aporte.video,
-            disponible: req.body.disponible || aporte.disponible,
+            id_aporte: req.body.id_aporte || archivo_aporte.id_aporte,
+            nombre: req.body.nombre || archivo_aporte.nombre,
+            descripcion: req.body.descripcion || archivo_aporte.descripcion,
+            ruta: req.body.ruta || archivo_aporte.ruta,
+            archivo: req.body.archivo || archivo_aporte.archivo,
+            video: req.body.video || archivo_aporte.video,
+            disponible: req.body.disponible || archivo_aporte.disponible,
           })
           .then(() => res.status(200).send(archivo_aporte))
           .catch((error) => res.status(400).send(error));

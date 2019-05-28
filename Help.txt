@@ -36,8 +36,10 @@ sequelize db:migrate
 sequelize seed:create --name my-seed-file
 
 
+git status
 git add *
 git commit -m "&TextoAEscribir"
 git push origin master
 
 
+npm install

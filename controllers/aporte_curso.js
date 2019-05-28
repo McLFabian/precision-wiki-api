@@ -48,9 +48,9 @@ module.exports = {
         }
         return aporte_curso
           .update({
-            id_curso: req.body.id_curso || aporte.id_curso,
-            id_aporte: req.body.id_aporte || aporte.id_aporte,
-            disponible: req.body.disponible || aporte.disponible,
+            id_curso: req.body.id_curso || aporte_curso.id_curso,
+            id_aporte: req.body.id_aporte || aporte_curso.id_aporte,
+            disponible: req.body.disponible || aporte_curso.disponible,
           })
           .then(() => res.status(200).send(aporte_curso))
           .catch((error) => res.status(400).send(error));

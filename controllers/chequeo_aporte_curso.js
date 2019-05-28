@@ -48,9 +48,9 @@ module.exports = {
         }
         return chequeo_aporte_curso
           .update({
-            id_usuario: req.body.id_usuario || aporte.id_usuario,
-            id_aporte_curso: req.body.id_aporte_curso || aporte.id_aporte_curso,
-            visto: req.body.visto || aporte.visto,
+            id_usuario: req.body.id_usuario || chequeo_aporte_curso.id_usuario,
+            id_aporte_curso: req.body.id_aporte_curso || chequeo_aporte_curso.id_aporte_curso,
+            visto: req.body.visto || chequeo_aporte_curso.visto,
           })
           .then(() => res.status(200).send(chequeo_aporte_curso))
           .catch((error) => res.status(400).send(error));
