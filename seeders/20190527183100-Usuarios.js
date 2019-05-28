@@ -13,7 +13,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     var newData = [];
     /*Inicio de instanciaciones para cada seeder*/
-    for (let i = 1; i < n_usuarios; i++) {
+    for (let i = 1; i <= n_usuarios; i++) {
         /*Randoms para nombres y apellidos*/
         var nombre = faker.name.firstName();
         var apellido_1 = faker.name.lastName();
