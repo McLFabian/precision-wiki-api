@@ -72,7 +72,7 @@ module.exports = {
         },{
           model: Chequeo_Aporte_Curso,
           as: 'chequeo_aporte_curso'
-        }{
+        },{
           model: Inscripcion_Curso,
           as: 'inscripcion_cursos'
         }],
