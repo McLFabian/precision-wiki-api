@@ -24,7 +24,7 @@ module.exports = {
 
   getById(req, res) {
     return Usuario
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Aporte,
           as: 'aportes'
@@ -66,7 +66,7 @@ module.exports = {
 
   update(req, res) {
     return Usuario
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Aporte,
           as: 'aportes'
@@ -104,7 +104,7 @@ module.exports = {
 
   delete(req, res) {
     return Usuario
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(usuario => {
         if (!usuario) {
           return res.status(400).send({

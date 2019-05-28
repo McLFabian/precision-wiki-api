@@ -14,7 +14,7 @@ module.exports = {
 
   getById(req, res) {
     return Archivo_Aporte
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then((archivo_aporte) => {
         if (!archivo_aporte) {
           return res.status(404).send({
@@ -43,7 +43,7 @@ module.exports = {
 
   update(req, res) {
     return Archivo_Aporte
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(archivo_aporte => {
         if (!archivo_aporte) {
           return res.status(404).send({
@@ -68,7 +68,7 @@ module.exports = {
 
   delete(req, res) {
     return Archivo_Aporte
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(archivo_aporte => {
         if (!archivo_aporte) {
           return res.status(400).send({

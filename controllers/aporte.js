@@ -24,7 +24,7 @@ module.exports = {
 
   getById(req, res) {
     return Aporte
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Archivo_Aporte,
           as: 'archivo_aportes'
@@ -59,7 +59,7 @@ module.exports = {
 
   update(req, res) {
     return Aporte
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Archivo_Aporte,
           as: 'archivo_aportes'
@@ -90,7 +90,7 @@ module.exports = {
 
   delete(req, res) {
     return Aporte
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(aporte => {
         if (!aporte) {
           return res.status(400).send({

@@ -24,7 +24,7 @@ module.exports = {
 
   getById(req, res) {
     return Cursos
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Inscripcion_Curso,
           as: 'inscripcion_cursos'
@@ -58,7 +58,7 @@ module.exports = {
 
   update(req, res) {
     return Curso
-      .findById(req.params.id, {
+      .findByPk(req.params.id, {
         include: [{
           model: Inscripcion_Curso,
           as: 'inscripcion_cursos'
@@ -88,7 +88,7 @@ module.exports = {
 
   delete(req, res) {
     return Curso
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(curso => {
         if (!curso) {
           return res.status(400).send({

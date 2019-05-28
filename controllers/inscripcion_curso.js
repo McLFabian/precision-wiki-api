@@ -14,7 +14,7 @@ module.exports = {
 
   getById(req, res) {
     return Inscripcion_Curso
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then((inscripcion_curso) => {
         if (!inscripcion_curso) {
           return res.status(404).send({
@@ -41,7 +41,7 @@ module.exports = {
 
   update(req, res) {
     return Inscripcion_Curso
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(inscripcion_curso => {
         if (!inscripcion_curso) {
           return res.status(404).send({
@@ -64,7 +64,7 @@ module.exports = {
 
   delete(req, res) {
     return Inscripcion_Curso
-      .findById(req.params.id)
+      .findByPk(req.params.id)
       .then(inscripcion_curso => {
         if (!inscripcion_curso) {
           return res.status(400).send({
