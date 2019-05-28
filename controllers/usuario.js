@@ -57,6 +57,7 @@ module.exports = {
         password: req.body.password,
         email: req.body.email,
         administrador: req.body.administrador,
+        aportador: req.body.aportador,
         activo: req.body.activo,
       })
       .then((usuario) => res.status(201).send(usuario))
@@ -92,6 +93,7 @@ module.exports = {
             password: req.body.password || usuario.password,
             email: req.body.email || usuario.email,
             administrador: req.body.administrador || usuario.administrador,
+            aportador: req.body.aportador || usuario.aportador,
             activo: req.body.activo || usuario.activo,
           })
           .then(() => res.status(200).send(usuario))

@@ -2,10 +2,7 @@
 
 var faker = require("faker"); /*'faker' genera datos al azar coherentes*/
 
-faker.locale = "en";
-
-var bool_administrador = true;
-var bool_activo = true;
+faker.locale = "es_MX";
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -17,8 +14,9 @@ module.exports = {
       username: 'jorge.huerta',
       password: 'admin',
       email : 'jorge.huerta@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     },
@@ -29,8 +27,9 @@ module.exports = {
       username: 'sebastian.leivas',
       password: 'admin',
       email : 'sebastian.leivas@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     },
@@ -41,8 +40,9 @@ module.exports = {
       username: 'fabian.miranda',
       password: 'admin',
       email : 'fabian.miranda@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     }], {});
@@ -56,8 +56,9 @@ module.exports = {
       username: 'jorge.huerta',
       password: 'admin',
       email : 'jorge.huerta@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     },
@@ -68,8 +69,9 @@ module.exports = {
       username: 'sebastian.leivas',
       password: 'admin',
       email : 'sebastian.leivas@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     },
@@ -80,8 +82,9 @@ module.exports = {
       username: 'fabian.miranda',
       password: 'admin',
       email : 'fabian.miranda@mail.udp.cl',
-      administrador: bool_administrador,
-      activo: bool_activo,
+      administrador: true,
+      aportador: true,
+      activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
     }])

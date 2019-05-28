@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.TEXT,
     email: DataTypes.TEXT,
     administrador: DataTypes.BOOLEAN,
+    aportador: DataTypes.BOOLEAN,
     activo: DataTypes.BOOLEAN
   }, {
     /*freezeTableName: true,*/
