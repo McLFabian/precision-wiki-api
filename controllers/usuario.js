@@ -1,41 +1,18 @@
 const Usuario = require('../models').Usuario;
 const Aporte = require('../models').Aporte;
-const Inscripcion_Curso = require('../models').Inscripcion_Curso;
+const Chequeo_Aporte_Curso = require('../models').Chequeo_Aporte_Curso
 
 module.exports = {
   list(req, res) {
     return Usuario
-      .findAll({
-        include: [{
-          model: Aporte,
-          as: 'aportes'
-        },{
-          model: Inscripcion_Curso,
-          as: 'inscripcion_cursos'
-        }],
-        order: [
-          ['createdAt', 'DESC'],
-          [{ model: Aporte, as: 'aportes' }, 'createdAt', 'DESC'],
-        ],
-      })
+      .findAll()
       .then((usuarios) => res.status(200).send(usuarios))
       .catch((error) => { res.status(400).send(error); });
   },
 
   getById(req, res) {
     return Usuario
-      .findByPk(req.params.id, {
-        include: [{
-          model: Aporte,
-          as: 'aportes'
-        },{
-          model: Chequeo_Aporte_Curso,
-          as: 'chequeo_aporte_curso'
-        },{
-          model: Inscripcion_Curso,
-          as: 'inscripcion_cursos'
-        }],
-      })
+      .findByPk(req.params.id)
       .then((usuario) => {
         if (!usuario) {
           return res.status(404).send({
@@ -66,18 +43,7 @@ module.exports = {
 
   update(req, res) {
     return Usuario
-      .findByPk(req.params.id, {
-        include: [{
-          model: Aporte,
-          as: 'aportes'
-        },{
-          model: Chequeo_Aporte_Curso,
-          as: 'chequeo_aporte_curso'
-        },{
-          model: Inscripcion_Curso,
-          as: 'inscripcion_cursos'
-        }],
-      })
+      .findByPk(req.params.id)
       .then(usuario => {
         if (!usuario) {
           return res.status(404).send({

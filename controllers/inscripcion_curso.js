@@ -4,9 +4,7 @@ module.exports = {
   list(req, res) {
     return Inscripcion_Curso
       .findAll({
-        order: [
-          ['createdAt', 'DESC'],
-        ],
+        attributes: {exclude: ['UsuarioId', 'CursoId']}
       })
       .then((inscripcion_cursos) => res.status(200).send(inscripcion_cursos))
       .catch((error) => { res.status(400).send(error); });
@@ -14,7 +12,10 @@ module.exports = {
 
   getById(req, res) {
     return Inscripcion_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'CursoId']}
+      })
       .then((inscripcion_curso) => {
         if (!inscripcion_curso) {
           return res.status(404).send({
@@ -41,7 +42,10 @@ module.exports = {
 
   update(req, res) {
     return Inscripcion_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'CursoId']}
+      })
       .then(inscripcion_curso => {
         if (!inscripcion_curso) {
           return res.status(404).send({
@@ -64,7 +68,10 @@ module.exports = {
 
   delete(req, res) {
     return Inscripcion_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'CursoId']}
+      })
       .then(inscripcion_curso => {
         if (!inscripcion_curso) {
           return res.status(400).send({

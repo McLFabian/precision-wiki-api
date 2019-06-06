@@ -4,9 +4,7 @@ module.exports = {
   list(req, res) {
     return Aporte_Curso
       .findAll({
-        order: [
-          ['createdAt', 'DESC'],
-        ],
+        attributes: {exclude: ['AporteId', 'CursoId']}
       })
       .then((aporte_cursos) => res.status(200).send(aporte_cursos))
       .catch((error) => { res.status(400).send(error); });
@@ -14,7 +12,10 @@ module.exports = {
 
   getById(req, res) {
     return Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId', 'CursoId']}
+      })
       .then((aporte_curso) => {
         if (!aporte_curso) {
           return res.status(404).send({
@@ -39,7 +40,10 @@ module.exports = {
 
   update(req, res) {
     return Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId', 'CursoId']}
+      })
       .then(aporte_curso => {
         if (!aporte_curso) {
           return res.status(404).send({
@@ -60,7 +64,10 @@ module.exports = {
 
   delete(req, res) {
     return Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId', 'CursoId']}
+      })
       .then(aporte_curso => {
         if (!aporte_curso) {
           return res.status(400).send({

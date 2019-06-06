@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     Aporte.belongsTo(models.Usuario);
     Aporte.hasMany(models.Archivo_Aporte, {
       foreignKey: 'id_aporte',
-      as: 'archivo_aportes',
+      as: 'archivo_aportes'
     });
     Aporte.hasMany(models.Aporte_Curso, {
       foreignKey: 'id_aporte',
-      as: 'aporte_cursos',
+      as: 'aporte_cursos'
     });
   };
   return Aporte;

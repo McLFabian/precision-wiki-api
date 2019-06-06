@@ -4,9 +4,7 @@ module.exports = {
   list(req, res) {
     return Archivo_Aporte
       .findAll({
-        order: [
-          ['createdAt', 'DESC'],
-        ],
+        attributes: {exclude: ['AporteId']}
       })
       .then((archivo_aportes) => res.status(200).send(archivo_aportes))
       .catch((error) => { res.status(400).send(error); });
@@ -14,7 +12,10 @@ module.exports = {
 
   getById(req, res) {
     return Archivo_Aporte
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId']}      
+      })
       .then((archivo_aporte) => {
         if (!archivo_aporte) {
           return res.status(404).send({
@@ -43,7 +44,10 @@ module.exports = {
 
   update(req, res) {
     return Archivo_Aporte
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId']}      
+      })
       .then(archivo_aporte => {
         if (!archivo_aporte) {
           return res.status(404).send({
@@ -68,7 +72,10 @@ module.exports = {
 
   delete(req, res) {
     return Archivo_Aporte
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['AporteId']}      
+      })
       .then(archivo_aporte => {
         if (!archivo_aporte) {
           return res.status(400).send({

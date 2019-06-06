@@ -6,17 +6,7 @@ module.exports = {
   list(req, res) {
     return Aporte
       .findAll({
-        include: [{
-          model: Archivo_Aporte,
-          as: 'archivo_aportes'
-        },{
-          model: Aporte_Curso,
-          as: 'aporte_cursos'
-        }],
-        order: [
-          ['createdAt', 'DESC'],
-          [{ model: Archivo_Aporte, as: 'archivo_aportes' }, 'createdAt', 'DESC'],
-        ],
+        attributes: {exclude: ['UsuarioId']}
       })
       .then((aportes) => res.status(200).send(aportes))
       .catch((error) => { res.status(400).send(error); });
@@ -24,14 +14,9 @@ module.exports = {
 
   getById(req, res) {
     return Aporte
-      .findByPk(req.params.id, {
-        include: [{
-          model: Archivo_Aporte,
-          as: 'archivo_aportes'
-        },{
-          model: Aporte_Curso,
-          as: 'aporte_cursos'
-        }],
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId']}      
       })
       .then((aporte) => {
         if (!aporte) {
@@ -59,14 +44,9 @@ module.exports = {
 
   update(req, res) {
     return Aporte
-      .findByPk(req.params.id, {
-        include: [{
-          model: Archivo_Aporte,
-          as: 'archivo_aportes'
-        },{
-          model: Aporte_Curso,
-          as: 'aporte_cursos'
-        }],
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId']}      
       })
       .then(aporte => {
         if (!aporte) {
@@ -88,9 +68,23 @@ module.exports = {
       .catch((error) => res.status(400).send(error));
   },
 
+  delete(req, res){
+    return Aporte
+    .destroy({
+      where : { id : req.params.id},
+      attributes: {exclude: ['UsuarioId']},
+      force: true
+    })
+    .then(() => res.status(204).send())
+    .catch((error) => res.status(400).send(error));
+  }
+  /*
   delete(req, res) {
     return Aporte
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId']}
+      })
       .then(aporte => {
         if (!aporte) {
           return res.status(400).send({
@@ -98,10 +92,10 @@ module.exports = {
           });
         }
         return aporte
-          .destroy()
+          .destroy({})
           .then(() => res.status(204).send())
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
-  },
+  },*/
 };

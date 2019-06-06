@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Usuario.hasMany(models.Aporte, {
       foreignKey: 'id_usuario',
-      as: 'aportes',
+      as: 'aportes'
     });
   };
   return Usuario;

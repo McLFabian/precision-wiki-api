@@ -4,9 +4,7 @@ module.exports = {
   list(req, res) {
     return Chequeo_Aporte_Curso
       .findAll({
-        order: [
-          ['createdAt', 'DESC'],
-        ],
+        attributes: {exclude: ['UsuarioId', 'AporteCursoId']}
       })
       .then((chequeo_aporte_cursos) => res.status(200).send(chequeo_aporte_cursos))
       .catch((error) => { res.status(400).send(error); });
@@ -14,7 +12,10 @@ module.exports = {
 
   getById(req, res) {
     return Chequeo_Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'AporteCursoId']}
+      })
       .then((chequeo_aporte_curso) => {
         if (!chequeo_aporte_curso) {
           return res.status(404).send({
@@ -39,7 +40,10 @@ module.exports = {
 
   update(req, res) {
     return Chequeo_Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'AporteCursoId']}
+      })
       .then(chequeo_aporte_curso => {
         if (!chequeo_aporte_curso) {
           return res.status(404).send({
@@ -60,7 +64,10 @@ module.exports = {
 
   delete(req, res) {
     return Chequeo_Aporte_Curso
-      .findByPk(req.params.id)
+      .findOne({
+        where : { id : req.params.id},
+        attributes: {exclude: ['UsuarioId', 'AporteCursoId']}
+      })
       .then(chequeo_aporte_curso => {
         if (!chequeo_aporte_curso) {
           return res.status(400).send({
