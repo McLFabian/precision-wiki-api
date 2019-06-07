@@ -59,6 +59,8 @@ router.post('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.add);
 router.put('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.update);
 router.delete('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.delete);
 
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

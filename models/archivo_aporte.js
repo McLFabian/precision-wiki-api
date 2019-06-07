@@ -10,7 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     disponible: DataTypes.BOOLEAN
   }, {});
   Archivo_Aporte.associate = function(models) {
-    Archivo_Aporte.belongsTo(models.Aporte);// associations can be defined here
+    Archivo_Aporte.belongsTo(models.Aporte,{
+      foreignKey: 'id_aporte'
+    });// associations can be defined here
   };
   return Archivo_Aporte;
 };

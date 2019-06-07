@@ -7,11 +7,17 @@ module.exports = (sequelize, DataTypes) => {
     disponible: DataTypes.BOOLEAN
   }, {});
   Aporte_Curso.associate = function(models) {
-    Aporte_Curso.belongsTo(models.Aporte);// associations can be defined here
-    Aporte_Curso.belongsTo(models.Curso);
+    Aporte_Curso.belongsTo(models.Aporte,{
+      foreignKey: 'id_aporte'
+    });// associations can be defined here
+    Aporte_Curso.belongsTo(models.Curso, {
+      foreignKey: 'id_curso'
+    });
     Aporte_Curso.hasMany(models.Chequeo_Aporte_Curso, {
       foreignKey: 'id_aporte_curso',
       as: 'chequeo_aporte_curso',
+      onDelete: 'cascade',
+      hooks: true
     })
   };
   return Aporte_Curso;

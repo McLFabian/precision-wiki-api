@@ -28,14 +28,20 @@ module.exports = (sequelize, DataTypes) => {
     Usuario.hasMany(models.Inscripcion_Curso, {
       foreignKey: 'id_usuario',
       as: 'inscripcion_cursos',
+      onDelete: 'cascade',
+      hooks: true
     });
     Usuario.hasMany(models.Chequeo_Aporte_Curso, {
       foreignKey: 'id_usuario',
       as: 'chequeo_aporte_cursos',
+      onDelete: 'cascade',
+      hooks: true
     });
     Usuario.hasMany(models.Aporte, {
       foreignKey: 'id_usuario',
-      as: 'aportes'
+      as: 'aportes',
+      onDelete: 'cascade',
+      hooks: true
     });
   };
   return Usuario;

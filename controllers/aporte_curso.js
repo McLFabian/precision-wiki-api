@@ -34,7 +34,7 @@ module.exports = {
         id_aporte: req.body.id_aporte,
         disponible: req.body.disponible,
       })
-      .then((aporte_curso) => res.status(201).send(aporte_curso))
+      .then((aporte_curso) => res.status(201).send(aporte_curso,{ message: 'Aporte curso creado'}))
       .catch((error) => res.status(400).send(error));
   },
 
