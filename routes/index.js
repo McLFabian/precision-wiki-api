@@ -1,5 +1,6 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let parseToken = require("./middlewares/token");
 
 //Rutas a los controladores personalizados
 
@@ -59,7 +60,12 @@ router.post('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.add);
 router.put('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.update);
 router.delete('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.delete);
 
+const LoginFunction = require("./auth/login");
+router.post("/api/login", LoginFunction);
 
+
+const LogOutFunction = require("./auth/logout");
+router.post("/logout", parseToken, LogOutFunction);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
