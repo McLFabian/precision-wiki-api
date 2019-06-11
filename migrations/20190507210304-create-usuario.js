@@ -13,15 +13,15 @@ module.exports = {
         type: Sequelize.TEXT
       },
       apellido: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.TEXT
       },
       run: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.TEXT
       },
       username: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.TEXT
       },
       password: {
@@ -29,27 +29,27 @@ module.exports = {
         type: Sequelize.TEXT
       },
       email: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.TEXT
       },
       administrador: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.BOOLEAN
       },
       aportador: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.BOOLEAN
       },
       activo: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.BOOLEAN
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
     });

@@ -1,0 +1,29 @@
+development	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^  "development": {$/;"	function	line:2
+username	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "username": "admin",$/;"	function	line:3
+password	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "password": "admin",$/;"	function	line:4
+database	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "database": "precisionWiki",$/;"	function	line:5
+host	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "host": "localhost",$/;"	function	line:6
+dialect	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "dialect": "postgres"$/;"	function	line:7
+test	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^  "test": {$/;"	function	line:9
+username	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "username": "tester",$/;"	function	line:10
+password	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "password": "tester",$/;"	function	line:11
+database	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "database": "precisionWiki",$/;"	function	line:12
+host	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "host": "localhost",$/;"	function	line:13
+dialect	/Users/dissonants/Documents/Git/precision-wiki-api/config/config.json	/^    "dialect": "postgres"$/;"	function	line:14
+createError	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var createError = require('http-errors');$/;"	variable	line:1
+cors	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var cors = require('cors');$/;"	variable	line:2
+express	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var express = require('express');$/;"	variable	line:3
+path	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var path = require('path');$/;"	variable	line:4
+cookieParser	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var cookieParser = require('cookie-parser');$/;"	variable	line:5
+logger	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var logger = require('morgan');$/;"	variable	line:6
+indexRouter	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var indexRouter = require('.\/routes\/index');$/;"	variable	line:8
+usersRouter	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var usersRouter = require('.\/routes\/users');$/;"	variable	line:9
+app	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var app = express();$/;"	variable	line:11
+module.exports.up	/Users/dissonants/Documents/Git/precision-wiki-api/migrations/20190507210304-create-usuario.js	/^module.exports = {$/;"	property	line:2
+list	/Users/dissonants/Documents/Git/precision-wiki-api/controllers/usuario.js	/^  list(req, res) {$/;"	function	line:6
+getById	/Users/dissonants/Documents/Git/precision-wiki-api/controllers/usuario.js	/^  getById(req, res) {$/;"	function	line:13
+add	/Users/dissonants/Documents/Git/precision-wiki-api/controllers/usuario.js	/^  add(req, res) {$/;"	function	line:27
+update	/Users/dissonants/Documents/Git/precision-wiki-api/controllers/usuario.js	/^  update(req, res) {$/;"	function	line:44
+delete	/Users/dissonants/Documents/Git/precision-wiki-api/controllers/usuario.js	/^  delete(req, res) {$/;"	function	line:71
+associate	/Users/dissonants/Documents/Git/precision-wiki-api/models/curso.js	/^  Curso.associate = function(models) {$/;"	function	line:9
+Curso.associate	/Users/dissonants/Documents/Git/precision-wiki-api/models/curso.js	/^  }, {});$/;"	function	line:8

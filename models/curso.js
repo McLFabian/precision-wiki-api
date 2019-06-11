@@ -10,6 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     Curso.hasMany(models.Inscripcion_Curso, {
       foreignKey: 'id_curso',
       as: 'inscripcion_cursos',
+      onDelete: 'cascade',
+      hooks: true
     });
     Curso.hasMany(models.Aporte_Curso, {
       foreignKey: 'id_curso',
