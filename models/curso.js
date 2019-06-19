@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   Curso.associate = function(models) {
     Curso.hasMany(models.Inscripcion_Curso, {
       foreignKey: 'id_curso',
-      as: 'inscripcion_cursos',
+      //as: 'inscripcion_cursos',
       onDelete: 'cascade',
       hooks: true
     });

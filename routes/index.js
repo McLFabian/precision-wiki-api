@@ -67,6 +67,9 @@ router.post("/api/login", LoginFunction);
 const LogOutFunction = require("./auth/logout");
 router.post("/logout", parseToken, LogOutFunction);
 
+const usuario_cursoController = require('../controllers').usuario_curso;
+router.get('/api/usuario_curso/:id', usuario_cursoController.getById);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

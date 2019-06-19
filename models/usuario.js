@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   Usuario.associate = function(models) {
     Usuario.hasMany(models.Inscripcion_Curso, {
       foreignKey: 'id_usuario',
-      as: 'inscripcion_cursos',
+      //as: 'inscripcion_cursos',
       onDelete: 'cascade',
       hooks: true
     });
