@@ -5,6 +5,7 @@ const aporte_curso = require('./aporte_curso');
 const curso = require('./curso');
 const inscripcion_curso = require('./inscripcion_curso');
 const chequeo_aporte_curso = require('./chequeo_aporte_curso');
+const usuario_curso = require('./usuario_curso');
 
 module.exports = {
   usuario,
@@ -14,4 +15,5 @@ module.exports = {
   curso,
   inscripcion_curso,
   chequeo_aporte_curso,
+  usuario_curso
 };
