@@ -4,3 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+createError	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var createError = require("http-errors");$/;"	variable	line:1
+cors	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var cors = require("cors");$/;"	variable	line:2
+express	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var express = require("express");$/;"	variable	line:3
+path	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var path = require("path");$/;"	variable	line:4
+cookieParser	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var cookieParser = require("cookie-parser");$/;"	variable	line:5
+logger	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var logger = require("morgan");$/;"	variable	line:6
+indexRouter	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var indexRouter = require(".\/routes\/index");$/;"	variable	line:8
+usersRouter	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var usersRouter = require(".\/routes\/users");$/;"	variable	line:9
+app	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var app = express();$/;"	variable	line:11
+bodyParser	/Users/dissonants/Documents/Git/precision-wiki-api/app.js	/^var bodyParser = require('body-parser');$/;"	variable	line:12
