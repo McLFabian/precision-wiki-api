@@ -6,20 +6,23 @@ const Curso = require('../models').Curso;
 module.exports = {
     getById(req, res) {
         return Curso
-          .findOne({
+          .findAll({
             attributes: ['nombre'],
             include: [{
                 model: Inscripcion_Curso,
+                attributes: ['id_curso', 'id_usuario'],
+                required: true,
                 include: [{
                     model: Usuario,
-                    where: [{id: req.params.id}]
+                    where: [{id: req.params.id}],
+                    attributes: ['id']
                 }]
             }]
           })
           .then((curso) => {
             if (!curso) {
               return res.status(404).send({
-                message: 'Cursos Not Found',
+                message: 'Usuario Not Found',
               });
             }
             return res.status(200).send(curso);
