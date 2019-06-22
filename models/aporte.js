@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     Aporte.hasMany(models.Archivo_Aporte, {
       foreignKey: 'id_aporte',
-      as: 'archivo_aportes',
+      //as: 'archivo_aportes',
       onDelete: 'cascade',
       hooks: true
     });
     Aporte.hasMany(models.Aporte_Curso, {
       foreignKey: 'id_aporte',
-      as: 'aporte_cursos',
+      //as: 'aporte_cursos',
       onDelete: 'cascade',
       hooks: true
     });

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Aporte_Curso.hasMany(models.Chequeo_Aporte_Curso, {
       foreignKey: 'id_aporte_curso',
-      as: 'chequeo_aporte_curso',
+      //as: 'chequeo_aporte_curso',
       onDelete: 'cascade',
       hooks: true
     })

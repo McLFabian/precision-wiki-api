@@ -70,6 +70,9 @@ router.post("/logout", parseToken, LogOutFunction);
 const usuario_cursoController = require('../controllers').usuario_curso;
 router.get('/api/usuario_curso/:id', usuario_cursoController.getById);
 
+const aportes_del_cursoController = require('../controllers').aportes_del_curso;
+router.get('/api/aportes_del_curso/:id', aportes_del_cursoController.getById);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
