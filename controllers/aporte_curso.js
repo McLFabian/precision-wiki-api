@@ -1,4 +1,8 @@
 const Aporte_Curso = require('../models').Aporte_Curso;
+const Aporte = require('../models').Aporte;
+const Curso = require('../models').Curso;
+
+
 
 module.exports = {
   list(req, res) {
@@ -36,6 +40,16 @@ module.exports = {
       })
       .then((aporte_curso) => res.status(201).send(aporte_curso,{ message: 'Aporte curso creado'}))
       .catch((error) => res.status(400).send(error));
+  },
+
+  asociar(req, res){
+    return Aporte_Curso
+    .create({ 
+        id_curso: req.body.id_curso,
+        id_aporte: req.body.id_aporte
+    })
+    .then((aporte_curso) => res.status(201).send(aporte_curso,{ message: 'Aporte curso creado'}))
+    .catch((error) => res.status(400).send(error))
   },
 
   update(req, res) {

@@ -33,6 +33,7 @@ const aporte_cursoController = require('../controllers').aporte_curso;
 router.get('/api/aporte_curso', aporte_cursoController.list);
 router.get('/api/aporte_curso/:id', aporte_cursoController.getById);
 router.post('/api/aporte_curso', aporte_cursoController.add);
+router.post('/api/aporte_curso', aporte_cursoController.asociar);
 router.put('/api/aporte_curso/:id', aporte_cursoController.update);
 router.delete('/api/aporte_curso/:id', aporte_cursoController.delete);
 
