@@ -15,7 +15,7 @@ module.exports = {
       password: 'admin',
       email : 'jorge.huerta@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
@@ -28,7 +28,7 @@ module.exports = {
       password: 'admin',
       email : 'sebastian.leivas@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
@@ -41,7 +41,7 @@ module.exports = {
       password: 'admin',
       email : 'fabian.miranda@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
@@ -57,7 +57,7 @@ module.exports = {
       password: 'admin',
       email : 'jorge.huerta@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
@@ -70,7 +70,7 @@ module.exports = {
       password: 'admin',
       email : 'sebastian.leivas@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
@@ -83,7 +83,7 @@ module.exports = {
       password: 'admin',
       email : 'fabian.miranda@mail.udp.cl',
       administrador: true,
-      aportador: true,
+      //aportador: true,
       activo: true,
       createdAt : new Date(),
       updatedAt : new Date()
