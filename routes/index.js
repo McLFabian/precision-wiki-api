@@ -53,13 +53,13 @@ router.post('/api/inscripcion_curso', inscripcion_cursoController.add);
 router.put('/api/inscripcion_curso/:id', inscripcion_cursoController.update);
 router.delete('/api/inscripcion_curso/:id', inscripcion_cursoController.delete);
 
-const chequeo_aporte_cursoController = require('../controllers').chequeo_aporte;
+const chequeo_aporteController = require('../controllers').chequeo_aporte;
 
-router.get('/api/chequeo_aporte', chequeo_aporte_Controller.list);
-router.get('/api/chequeo_aporte/:id', chequeo_aporte_Controller.getById);
-router.post('/api/chequeo_aporte', chequeo_aporte_Controller.add);
-router.put('/api/chequeo_aporte/:id', chequeo_aporte_Controller.update);
-router.delete('/api/chequeo_aporte/:id', chequeo_aporte_Controller.delete);
+router.get('/api/chequeo_aporte', chequeo_aporteController.list);
+router.get('/api/chequeo_aporte/:id', chequeo_aporteController.getById);
+router.post('/api/chequeo_aporte', chequeo_aporteController.add);
+router.put('/api/chequeo_aporte/:id', chequeo_aporteController.update);
+router.delete('/api/chequeo_aporte/:id', chequeo_aporteController.delete);
 
 const LoginFunction = require("./auth/login");
 router.post("/api/login", LoginFunction);

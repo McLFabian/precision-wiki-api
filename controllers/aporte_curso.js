@@ -1,4 +1,4 @@
-const Aporte_Curso = require('../models').Aporte_Curso;
+/*const Aporte_Curso = require('../models').Aporte_Curso;
 const Aporte = require('../models').Aporte;
 const Curso = require('../models').Curso;
 
@@ -95,4 +95,4 @@ module.exports = {
       })
       .catch((error) => res.status(400).send(error));
   },
-};
+};*/
