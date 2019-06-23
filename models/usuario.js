@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.TEXT,
     email: DataTypes.TEXT,
     administrador: DataTypes.BOOLEAN,
-    aportador: DataTypes.BOOLEAN,
+    //aportador: DataTypes.BOOLEAN,
     activo: DataTypes.BOOLEAN
   }, {
     /*freezeTableName: true,*/
@@ -31,18 +31,18 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'cascade',
       hooks: true
     });
-    Usuario.hasMany(models.Chequeo_Aporte_Curso, {
+    Usuario.hasMany(models.Chequeo_Aporte, {
       foreignKey: 'id_usuario',
-      as: 'chequeo_aporte_cursos',
+      as: 'chequeo_aporte',
       onDelete: 'cascade',
       hooks: true
     });
-    Usuario.hasMany(models.Aporte, {
+/*    Usuario.hasMany(models.Aporte, {
       foreignKey: 'id_usuario',
       as: 'aportes',
       onDelete: 'cascade',
       hooks: true
-    });
+    });*/
   };
   return Usuario;
 };

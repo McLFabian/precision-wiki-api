@@ -8,21 +8,29 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id_usuario: {
+/*      id_usuario: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: 'Usuarios',
           key: 'id'
         }
+      },*/
+      id_curso: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Cursos',
+          key: 'id'
+        }
       },
-      titulo: {
+      nombre: {
         type: Sequelize.TEXT
       },
-      descripcion: {
+      link_archivo: {
         type: Sequelize.TEXT
       },
-      contenido: {
+      link_video: {
         type: Sequelize.TEXT
       },
       disponible: {

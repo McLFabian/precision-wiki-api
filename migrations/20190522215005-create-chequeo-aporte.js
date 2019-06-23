@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Chequeo_Aporte_Cursos', {
+    return queryInterface.createTable('Chequeo_Aportes', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -15,10 +15,10 @@ module.exports = {
           key: 'id'
         }
       },
-      id_aporte_curso: {
+      id_aporte: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Aporte_Cursos',
+          model: 'Aportes',
           key: 'id'
         }
       },
@@ -36,6 +36,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Chequeo_Aporte_Cursos');
+    return queryInterface.dropTable('Chequeo_Aportes');
   }
 };

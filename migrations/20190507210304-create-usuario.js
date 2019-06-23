@@ -36,10 +36,10 @@ module.exports = {
         allowNull: true,
         type: Sequelize.BOOLEAN
       },
-      aportador: {
+/*      aportador: {
         allowNull: true,
         type: Sequelize.BOOLEAN
-      },
+      },*/
       activo: {
         allowNull: true,
         type: Sequelize.BOOLEAN

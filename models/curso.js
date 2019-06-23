@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'cascade',
       hooks: true
     });
-    Curso.hasMany(models.Aporte_Curso, {
+    Curso.hasMany(models.Aporte, {
       foreignKey: 'id_curso',
       //as: 'aporte_cursos',
       onDelete: 'cascade',

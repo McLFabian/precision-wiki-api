@@ -20,22 +20,22 @@ router.post('/api/aporte', aporteController.add);
 router.put('/api/aporte/:id', aporteController.update);
 router.delete('/api/aporte/:id', aporteController.delete);
 
-const archivo_aporteController = require('../controllers').archivo_aporte;
+/*const archivo_aporteController = require('../controllers').archivo_aporte;
 
 router.get('/api/archivo_aporte', archivo_aporteController.list);
 router.get('/api/archivo_aporte/:id', archivo_aporteController.getById);
 router.post('/api/archivo_aporte', archivo_aporteController.add);
 router.put('/api/archivo_aporte/:id', archivo_aporteController.update);
-router.delete('/api/archivo_aporte/:id', archivo_aporteController.delete);
+router.delete('/api/archivo_aporte/:id', archivo_aporteController.delete);*/
 
-const aporte_cursoController = require('../controllers').aporte_curso;
+/*const aporte_cursoController = require('../controllers').aporte_curso;
 
 router.get('/api/aporte_curso', aporte_cursoController.list);
 router.get('/api/aporte_curso/:id', aporte_cursoController.getById);
 router.post('/api/aporte_curso', aporte_cursoController.add);
 router.post('/api/aporte_curso', aporte_cursoController.asociar);
 router.put('/api/aporte_curso/:id', aporte_cursoController.update);
-router.delete('/api/aporte_curso/:id', aporte_cursoController.delete);
+router.delete('/api/aporte_curso/:id', aporte_cursoController.delete);*/
 
 const cursoController = require('../controllers').curso;
 
@@ -53,13 +53,13 @@ router.post('/api/inscripcion_curso', inscripcion_cursoController.add);
 router.put('/api/inscripcion_curso/:id', inscripcion_cursoController.update);
 router.delete('/api/inscripcion_curso/:id', inscripcion_cursoController.delete);
 
-const chequeo_aporte_cursoController = require('../controllers').chequeo_aporte_curso;
+const chequeo_aporte_cursoController = require('../controllers').chequeo_aporte;
 
-router.get('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.list);
-router.get('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.getById);
-router.post('/api/chequeo_aporte_curso', chequeo_aporte_cursoController.add);
-router.put('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.update);
-router.delete('/api/chequeo_aporte_curso/:id', chequeo_aporte_cursoController.delete);
+router.get('/api/chequeo_aporte', chequeo_aporte_Controller.list);
+router.get('/api/chequeo_aporte/:id', chequeo_aporte_Controller.getById);
+router.post('/api/chequeo_aporte', chequeo_aporte_Controller.add);
+router.put('/api/chequeo_aporte/:id', chequeo_aporte_Controller.update);
+router.delete('/api/chequeo_aporte/:id', chequeo_aporte_Controller.delete);
 
 const LoginFunction = require("./auth/login");
 router.post("/api/login", LoginFunction);

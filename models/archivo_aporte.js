@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Archivo_Aporte = sequelize.define('Archivo_Aporte', {
     id_aporte: DataTypes.INTEGER,
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   Archivo_Aporte.associate = function(models) {
     Archivo_Aporte.belongsTo(models.Aporte,{
       foreignKey: 'id_aporte'
-    });// associations can be defined here
+    });
   };
   return Archivo_Aporte;
-};
+};*/

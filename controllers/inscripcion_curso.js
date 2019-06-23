@@ -34,7 +34,6 @@ module.exports = {
         id_usuario: req.body.id_usuario,
         activo: req.body.disponible,
         endedAt: req.body.endedAt,
-
       })
       .then((inscripcion_curso) => res.status(201).send(inscripcion_curso))
       .catch((error) => res.status(400).send(error));

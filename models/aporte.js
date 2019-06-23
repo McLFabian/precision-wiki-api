@@ -1,28 +1,38 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Aporte = sequelize.define('Aporte', {
-    id_usuario: DataTypes.INTEGER,
-    titulo: DataTypes.STRING,
-    descripcion: DataTypes.TEXT,
-    contenido: DataTypes.TEXT,
+    id_curso: DataTypes.INTEGER,
+    nombre: DataTypes.STRING,
+    link_archivo: DataTypes.TEXT,
+    link_video: DataTypes.TEXT,
     disponible: DataTypes.BOOLEAN
   }, {});
-  Aporte.associate = function(models) {
+/*  Aporte.associate = function(models) {
     Aporte.belongsTo(models.Usuario,{
       foreignKey: 'id_usuario'
+    });*/
+  Aporte.associate = function(models) {
+    Aporte.belongsTo(models.Curso,{
+      foreignKey: 'id_curso'
     });
-    Aporte.hasMany(models.Archivo_Aporte, {
+  Aporte.hasMany(models.Chequeo_Aporte_Curso, {
+    foreignKey: 'id_aporte',
+    //as: 'chequeo_aporte_curso',
+    onDelete: 'cascade',
+    hooks: true
+  });
+/*    Aporte.hasMany(models.Archivo_Aporte, {
       foreignKey: 'id_aporte',
       //as: 'archivo_aportes',
       onDelete: 'cascade',
       hooks: true
-    });
-    Aporte.hasMany(models.Aporte_Curso, {
+    });*/
+/*    Aporte.hasMany(models.Aporte_Curso, {
       foreignKey: 'id_aporte',
       //as: 'aporte_cursos',
       onDelete: 'cascade',
       hooks: true
-    });
+    });*/
   };
   return Aporte;
 };

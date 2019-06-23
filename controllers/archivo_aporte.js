@@ -1,4 +1,4 @@
-const Archivo_Aporte = require('../models').Archivo_Aporte;
+/*const Archivo_Aporte = require('../models').Archivo_Aporte;
 
 module.exports = {
   list(req, res) {
@@ -14,7 +14,7 @@ module.exports = {
     return Archivo_Aporte
       .findOne({
         where : { id : req.params.id},
-        attributes: {exclude: ['AporteId']}      
+        attributes: {exclude: ['AporteId']}
       })
       .then((archivo_aporte) => {
         if (!archivo_aporte) {
@@ -46,7 +46,7 @@ module.exports = {
     return Archivo_Aporte
       .findOne({
         where : { id : req.params.id},
-        attributes: {exclude: ['AporteId']}      
+        attributes: {exclude: ['AporteId']}
       })
       .then(archivo_aporte => {
         if (!archivo_aporte) {
@@ -74,7 +74,7 @@ module.exports = {
     return Archivo_Aporte
       .findOne({
         where : { id : req.params.id},
-        attributes: {exclude: ['AporteId']}      
+        attributes: {exclude: ['AporteId']}
       })
       .then(archivo_aporte => {
         if (!archivo_aporte) {
@@ -90,3 +90,4 @@ module.exports = {
       .catch((error) => res.status(400).send(error));
   },
 };
+*/

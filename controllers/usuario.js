@@ -1,6 +1,6 @@
 const Usuario = require('../models').Usuario;
 const Aporte = require('../models').Aporte;
-const Chequeo_Aporte_Curso = require('../models').Chequeo_Aporte_Curso
+const Chequeo_Aporte = require('../models').Chequeo_Aporte
 
 module.exports = {
   list(req, res) {
@@ -34,7 +34,7 @@ module.exports = {
         password: req.body.password,
         email: req.body.email,
         administrador: req.body.administrador,
-        aportador: req.body.aportador,
+        //aportador: req.body.aportador,
         activo: req.body.activo,
       })
       .then((usuario) => res.status(201).send(usuario))
@@ -59,7 +59,7 @@ module.exports = {
             password: req.body.password || usuario.password,
             email: req.body.email || usuario.email,
             administrador: req.body.administrador || usuario.administrador,
-            aportador: req.body.aportador || usuario.aportador,
+            //aportador: req.body.aportador || usuario.aportador,
             activo: req.body.activo || usuario.activo,
           })
           .then(() => res.status(200).send(usuario))

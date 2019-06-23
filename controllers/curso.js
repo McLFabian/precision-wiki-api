@@ -1,6 +1,6 @@
 const Curso = require('../models').Curso;
 const Inscripcion_Curso = require('../models').Inscripcion_Curso;
-const Aporte_Curso = require('../models').Aporte_Curso;
+const Aporte = require('../models').Aporte;
 
 module.exports = {
   list(req, res) {
