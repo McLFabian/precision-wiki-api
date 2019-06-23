@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     Aporte.belongsTo(models.Curso,{
       foreignKey: 'id_curso'
     });
-  Aporte.hasMany(models.Chequeo_Aporte_Curso, {
+  Aporte.hasMany(models.Chequeo_Aporte, {
     foreignKey: 'id_aporte',
     //as: 'chequeo_aporte_curso',
     onDelete: 'cascade',
