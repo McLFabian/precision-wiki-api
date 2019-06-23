@@ -15,6 +15,7 @@ router.delete('/api/usuario/:id', usuarioController.delete);
 const aporteController = require('../controllers').aporte;
 
 router.get('/api/aporte', aporteController.list);
+router.get('/api/aporte/:id', aporteController.list2);
 router.get('/api/aporte/:id', aporteController.getById);
 router.post('/api/aporte', aporteController.add);
 router.put('/api/aporte/:id', aporteController.update);
