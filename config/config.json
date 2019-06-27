@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "sebaleiva",
-    "password": "password",
-    "database": "precisionWiki",
+    "username": "postgres",
+    "password": "postgres",
+    "database": "precisionwikidb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
