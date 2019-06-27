@@ -5,7 +5,7 @@ var faker = require("faker"); /*'faker' genera datos al azar coherentes*/
 faker.locale = "es_MX";
 
 var n_usuarios = 3;//53;/*await Usuario.count({ where: { columnName: condition }); /*Cantidad de usuarios creados en el seeder*/
-var n_cursos = 5;
+var n_cursos = 4;
 var id_curso = 1;
 
 module.exports = {

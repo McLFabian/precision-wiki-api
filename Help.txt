@@ -35,6 +35,8 @@ sequelize db:migrate
 ### Crear un seeder ###
 sequelize seed:create --name my-seed-file
 
+### Echar a andar los seeders ###
+sequelize db:seed:all
 
 git status
 git add *
